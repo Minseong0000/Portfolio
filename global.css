@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+/* *** css 변수 *** */
+/* 전역 변수 */
+:root {
+  /* 선언(설정) */
+
+  /* fonts */
+  --font-ko: 'Pretendard', -apple-system, BlinkMacSystemFont, "Helvetica Neue","Apple SD Gothic Neo", Arial, sans-serif;
+  --font-en-main: 'Montserrat', -apple-system, BlinkMacSystemFont, "Helvetica Neue","Apple SD Gothic Neo", Arial, sans-serif;
+  --font-en-sub: 'Poppins', -apple-system, BlinkMacSystemFont, "Helvetica Neue","Apple SD Gothic Neo", Arial, sans-serif;
+
+  /* colors */
+  --color-gray-10: #FAFAFA;
+  --color-gray-20: #9F9F9F;
+  --color-gray-30: #777777;
+  --color-gray-40: #EEEDED;
+  --color-lightblue: #EDF2F3; 
+  --color-white: #fff;
+
+  /* font-size */
+  --font-xxl: 72px; 
+  --font-xl: 34px;
+  --font-lg: 27px;
+  --font-md: 24px;
+  --font-sm: 20px;
+  --font-xs: 16px;
+}
+
+/* 부드러운 스크롤 */
+html {
+  scroll-behavior: smooth;
+}
+
+.flex-wrapper {
+  display: flex;
+}
+
+.grid-wrapper {
+  display: grid;
+}

@@ -1,0 +1,58 @@
+@charset "utf-8";
+body {
+  font-family: var(--font-en-main);
+  font-size: var(--font-xs);
+  background-color: var(--color-gray-10);
+  position: relative;
+  height: 100vh;
+}
+header { 
+  justify-content: space-between;
+  padding: 20px 35px 0;
+}
+header .menu-left a {
+  margin-right: 20px;
+}
+header .menu-right {
+  text-transform: capitalize;
+}
+main {
+  margin-top: 50px;
+  height: 76%;
+  align-items: center;
+}
+main .portfolio-list {
+  font-family: var(--font-en-sub);
+  font-size: var(--font-sm);
+  text-transform: uppercase;
+  width: 32%;
+  /* text-align: center; */
+  
+}
+main .portfolio-list ul {
+  margin-left: 100px;
+}
+main .portfolio-list ul li {
+  margin: 20px;
+}
+
+main .portfolio-project {
+  width: 68%;
+  height: 100%;
+  margin-right: 60px;
+  border: 1px solid #000;
+  border-radius: 60px;
+}
+main .portfolio-project .portfolio-wrapper li{
+  grid-template-columns: 1fr 1fr; 
+  height: 100%;
+  width: 100%;
+}
+main .portfolio-project .portfolio-wrapper .vivienne-westwood img {
+  grid-column:;
+}
+
+footer {
+  position: absolute;
+  bottom: 20px; left: 35px;
+}

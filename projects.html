@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="utf-8">
   <title>포트폴리오</title>
@@ -10,35 +11,43 @@
   <link rel="stylesheet" href="./assets/styles/fonts.css">
   <!-- global css -->
   <link rel="stylesheet" href="./global.css">
-  <!-- index css -->
-  <link rel="stylesheet" href="./index.css">
+  <!-- projects css -->
+  <link rel="stylesheet" href="./projects.css">
 
   <!-- jquery script -->
   <script src="./assets/scripts/jquery-3.7.1.min.js"></script>
   <!-- index js -->
-  <script defer src="./index.js"></script>
+  <!-- <script defer src="./projects.js"></script> -->
 </head>
 
 <body>
   <header class="flex-wrapper">
     <div class="menu-left">
-      <ul class="global-navigation flex-wrapper">
-        <li><a href="#">github</a></li>
-        <li><a href="#">instagram</a></li>
-        <li><a href="#">linkedin</a></li>
-      </ul>
+      <a href="#"><img src="./assets/images/arrow.png" alt="화살표"></a>
+      <span>Back to home</span>
     </div>
     <div class="menu-right">
       <a href="#">contact</a>
     </div>
   </header>
 
-  <main>
-    <h1>
-      Hey! I'm <span>Minseong,</span><br>
-      a <span class="txt-type" data-wait="1000" data-words='["Chef","Designer","Developer"]'></span>
-    </h1>
-    <button>projects</button>
+  <main class="flex-wrapper">
+    <section class="portfolio-list">
+      <ul>
+        <li>vivienne westwood</li>
+        <li>sejin bronze vill</li>
+        <li>creating...</li>
+        <li>creating...</li>
+      </ul>
+    </section>
+    <section class="portfolio-project">
+      <ul class="protfolio-wrapper">
+        <li class="vivienne-westwood grid-wrapper">
+          <div class="description"></div>
+          <img src="./assets/images/gallery.png" alt="화보사진">
+        </li>
+      </ul>
+    </section>
   </main>
 
   <footer>
@@ -46,4 +55,5 @@
   </footer>
 
 </body>
+
 </html>
