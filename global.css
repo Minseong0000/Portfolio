@@ -17,6 +17,7 @@
   --color-gray-40: #EEEDED;
   --color-lightblue: #EDF2F3; 
   --color-white: #fff;
+  --color-black: #000;
 
   /* font-size */
   --font-xxl: 72px; 
@@ -38,4 +39,7 @@ html {
 
 .grid-wrapper {
   display: grid;
+}
+.fixed-position {
+  position: fixed;
 }

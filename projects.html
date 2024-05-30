@@ -16,8 +16,12 @@
 
   <!-- jquery script -->
   <script src="./assets/scripts/jquery-3.7.1.min.js"></script>
+  <!-- gsap -->
+  <script src="./assets/scripts/gsap.min.js"></script>
+  <!-- scroll trigger -->
+  <script src="./assets/scripts/ScrollTrigger.min.js"></script>
   <!-- index js -->
-  <!-- <script defer src="./projects.js"></script> -->
+  <script defer src="./projects.js"></script>
 </head>
 
 <body>
@@ -34,23 +38,62 @@
   <main class="flex-wrapper">
     <section class="portfolio-list">
       <ul>
-        <li>vivienne westwood</li>
+        <li class="on">vivienne westwood</li>
         <li>sejin bronze vill</li>
         <li>creating...</li>
         <li>creating...</li>
       </ul>
     </section>
     <section class="portfolio-project">
-      <ul class="protfolio-wrapper">
-        <li class="vivienne-westwood grid-wrapper">
-          <div class="description"></div>
-          <img src="./assets/images/gallery.png" alt="화보사진">
+      <ul class="portfolio-wrapper">
+
+        <li class="vivienne-westwood grid-wrapper first">
+          <div class="description">
+            <div class="description-top">
+              <p>Team Project</p>
+              <h2>VIVIENNE WESTWOOD</h2>
+              <P>#HTML5&CSS3 #JavaScript #jQuery<br>#GSAP #AOS #SWIPER</P>
+            </div>
+            <div class="description-bottom">
+              <ul class="website flex-wrapper">
+                <li>website</li>
+                <li><a href="#">vivienne-westwood</a></li>
+              </ul>
+              <ul class="report flex-wrapper">
+                <li>report</li>
+                <li><a href="#">완료보고서 보러가기</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="img-wrapper"></div>
         </li>
+
+        <li class="vivienne-westwood grid-wrapper">
+          <div class="description">
+            <div class="description-top">
+              <p>Team Project</p>
+              <h2>VIVIENNE WESTWOOD</h2>
+              <P>#HTML5&CSS3 #JavaScript #jQuery<br>#GSAP #AOS #SWIPER</P>
+            </div>
+            <div class="description-bottom">
+              <ul class="website flex-wrapper">
+                <li>website</li>
+                <li><a href="#">vivienne-westwood</a></li>
+              </ul>
+              <ul class="report flex-wrapper">
+                <li>report</li>
+                <li><a href="#">완료보고서 보러가기</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="img-wrapper"></div>
+        </li>
+
       </ul>
     </section>
   </main>
 
-  <footer>
+  <footer class="fixed-position">
     <a href="#">About me</a>
   </footer>
 

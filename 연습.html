@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>dd</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <link rel="stylesheet" href="./assets/styles/reset.css">
+  <style>
+    body {
+      height: 400vh;
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+      border: 10px solid #000;
+      height: 100vh;
+      width: 100%;
+      overflow: hidden;
+      position: fixed;
+      top: 0;
+    }
+
+    .box li {
+      height: 100vh;
+      width: 100%;
+    }
+
+    .orange {
+      background-color: orange;
+    }
+
+    .blue {
+      background-color: blue;
+    }
+
+    .pink {
+      background-color: pink;
+    }
+
+    .salmon {
+      background-color: salmon;
+    }
+  </style>
+  <!-- jquery script -->
+  <script src="./assets/scripts/jquery-3.7.1.min.js"></script>
+  <!-- gsap -->
+  <script src="./assets/scripts/gsap.min.js"></script>
+  <!-- scroll trigger -->
+  <script src="./assets/scripts/ScrollTrigger.min.js"></script>
+  <!-- index js -->
+</head>
+
+<body>
+  <ul class="box">
+    <li class="orange">
+      <h2>ddd</h2>
+      <p>ddaf;jlk</p>
+    </li>
+    <li class="blue">
+      <h2>ddd</h2>
+      <p>ddaf;jlk</p>
+    </li>
+    <li class="pink">
+      <h2>ddd</h2>
+      <p>ddaf;jlk</p>
+    </li>
+    <li class="salmon">
+      <h2>ddd</h2>
+      <p>ddaf;jlk</p>
+    </li>
+  </ul>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to("li", {
+      scrollTrigger: {
+        trigger: ".orange",
+        start: "top top",
+        end: "top -400vh",
+        scrub: true,
+        markets: true,
+      },
+      translateY: '-400vh'
+    });
+
+
+  </script>
+</body>
+
+</html>

@@ -4,7 +4,7 @@ body {
   font-size: var(--font-xs);
   background-color: var(--color-gray-10);
   position: relative;
-  height: 100vh;
+  height: 400vh;
 }
 header { 
   justify-content: space-between;
@@ -18,16 +18,20 @@ header .menu-right {
 }
 main {
   margin-top: 50px;
-  height: 76%;
+  height: 76vh;
   align-items: center;
 }
 main .portfolio-list {
   font-family: var(--font-en-sub);
   font-size: var(--font-sm);
+  color: var(--color-gray-20);
   text-transform: uppercase;
   width: 32%;
   /* text-align: center; */
   
+}
+main .portfolio-list li.on {
+  color: var(--color-black);
 }
 main .portfolio-list ul {
   margin-left: 100px;
@@ -40,19 +44,62 @@ main .portfolio-project {
   width: 68%;
   height: 100%;
   margin-right: 60px;
-  border: 1px solid #000;
-  border-radius: 60px;
+  border: 1px solid var(--color-black);
+  border-radius: 60px;  
+  overflow: hidden;
+}
+main .portfolio-project .portfolio-wrapper {
+  height: 100%;
+  background-color: rgba(55, 75, 63, .5);
 }
 main .portfolio-project .portfolio-wrapper li{
-  grid-template-columns: 1fr 1fr; 
+  grid-template-columns: 55% 45%; 
   height: 100%;
   width: 100%;
 }
-main .portfolio-project .portfolio-wrapper .vivienne-westwood img {
-  grid-column:;
+main .portfolio-project .portfolio-wrapper .vivienne-westwood .img-wrapper {
+  width: 100%; height: 100%;
+  background: url(./assets/images/gallery.png) no-repeat 50% / cover;
+  grid-column: 2;
+}
+main .portfolio-project .portfolio-wrapper .vivienne-westwood .description {
+  height: 80%;
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
+main .portfolio-project .portfolio-wrapper .vivienne-westwood .description .description-top p:last-of-type {
+  padding-left: 5px;
+  color: var(--color-gray-30);
+}
+
+main .portfolio-project .portfolio-wrapper .vivienne-westwood .description .description-top h2 {
+  font-weight: 700;
+  font-size: var(--font-xl);
+}
+
+main .portfolio-project .portfolio-wrapper .vivienne-westwood .description .description-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  justify-content: space-between;
+}
+main .portfolio-project .portfolio-wrapper .vivienne-westwood .description .description-bottom ul { margin: 30px;}
+main .portfolio-project .portfolio-wrapper .vivienne-westwood .description .description-bottom ul li:first-child {font-weight: 500;}
+main .portfolio-project .portfolio-wrapper .vivienne-westwood .description .description-bottom ul li:last-child {text-align: center;}
+main .portfolio-project .portfolio-wrapper .vivienne-westwood .description .description-bottom .website li a {
+  color: var(--color-gray-30);
+  text-decoration: underline;
+}
+main .portfolio-project .portfolio-wrapper .vivienne-westwood .description .description-bottom .report li a {
+  border: 1px solid var(--color-black);
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+main .portfolio-project .portfolio-wrapper .vivienne-westwood .description .description-bottom .report li a:hover {
+  background-color: var(--color-lightblue);
 }
 
 footer {
-  position: absolute;
   bottom: 20px; left: 35px;
 }
