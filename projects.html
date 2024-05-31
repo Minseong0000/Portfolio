@@ -1,102 +1,149 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>포트폴리오</title>
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <!-- reset -->
+    <link rel="stylesheet" href="./assets/styles/reset.css" />
+    <!-- fonts -->
+    <link rel="stylesheet" href="./assets/styles/fonts.css" />
+    <!-- global css -->
+    <link rel="stylesheet" href="./global.css" />
+    <!-- projects css -->
+    <link rel="stylesheet" href="./projects.css" />
 
-<head>
-  <meta charset="utf-8">
-  <title>포트폴리오</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
-  <!-- reset -->
-  <link rel="stylesheet" href="./assets/styles/reset.css">
-  <!-- fonts -->
-  <link rel="stylesheet" href="./assets/styles/fonts.css">
-  <!-- global css -->
-  <link rel="stylesheet" href="./global.css">
-  <!-- projects css -->
-  <link rel="stylesheet" href="./projects.css">
+    <!-- jquery script -->
+    <script src="./assets/scripts/jquery-3.7.1.min.js"></script>
+    <!-- gsap -->
+    <script src="./assets/scripts/gsap.min.js"></script>
+    <!-- scroll trigger -->
+    <script src="./assets/scripts/ScrollTrigger.min.js"></script>
+    <!-- index js -->
+    <script defer src="./projects.js"></script>
+  </head>
 
-  <!-- jquery script -->
-  <script src="./assets/scripts/jquery-3.7.1.min.js"></script>
-  <!-- gsap -->
-  <script src="./assets/scripts/gsap.min.js"></script>
-  <!-- scroll trigger -->
-  <script src="./assets/scripts/ScrollTrigger.min.js"></script>
-  <!-- index js -->
-  <script defer src="./projects.js"></script>
-</head>
+  <body>
+    <header class="flex-wrapper">
+      <div class="menu-left">
+        <a href="#"><img src="./assets/images/arrow.png" alt="화살표" /></a>
+        <span>Back to home</span>
+      </div>
+      <div class="menu-right">
+        <a href="#">contact</a>
+      </div>
+    </header>
 
-<body>
-  <header class="flex-wrapper">
-    <div class="menu-left">
-      <a href="#"><img src="./assets/images/arrow.png" alt="화살표"></a>
-      <span>Back to home</span>
-    </div>
-    <div class="menu-right">
-      <a href="#">contact</a>
-    </div>
-  </header>
-
-  <main class="flex-wrapper">
-    <section class="portfolio-list">
-      <ul>
-        <li class="on">vivienne westwood</li>
-        <li>sejin bronze vill</li>
-        <li>creating...</li>
-        <li>creating...</li>
-      </ul>
-    </section>
-    <section class="portfolio-project">
-      <ul class="portfolio-wrapper">
-
-        <li class="vivienne-westwood grid-wrapper first">
-          <div class="description">
-            <div class="description-top">
-              <p>Team Project</p>
-              <h2>VIVIENNE WESTWOOD</h2>
-              <P>#HTML5&CSS3 #JavaScript #jQuery<br>#GSAP #AOS #SWIPER</P>
+    <main class="flex-wrapper">
+      <section class="portfolio-list">
+        <ul>
+          <li class="on">vivienne westwood</li>
+          <li>sejin bronze vill</li>
+          <li>creating...</li>
+          <li>creating...</li>
+        </ul>
+      </section>
+      <section class="portfolio-project">
+        <ul class="portfolio-wrapper">
+          <li class="vivienne-westwood grid-wrapper first">
+            <div class="description">
+              <div class="description-top">
+                <p>Team Project</p>
+                <h2>VIVIENNE WESTWOOD</h2>
+                <p>#HTML5&CSS3 #JavaScript #jQuery<br />#GSAP #AOS #SWIPER</p>
+              </div>
+              <div class="description-bottom">
+                <ul class="website flex-wrapper">
+                  <li>website</li>
+                  <li><a href="#">vivienne-westwood</a></li>
+                </ul>
+                <ul class="report flex-wrapper">
+                  <li>report</li>
+                  <li><a href="#">완료보고서 보러가기</a></li>
+                </ul>
+              </div>
             </div>
-            <div class="description-bottom">
-              <ul class="website flex-wrapper">
-                <li>website</li>
-                <li><a href="#">vivienne-westwood</a></li>
-              </ul>
-              <ul class="report flex-wrapper">
-                <li>report</li>
-                <li><a href="#">완료보고서 보러가기</a></li>
-              </ul>
+            <div class="img-wrapper">
+              <div class="img-container1"></div>
+              <div class="img-container2"></div>
             </div>
-          </div>
-          <div class="img-wrapper"></div>
-        </li>
+          </li>
 
-        <li class="vivienne-westwood grid-wrapper">
-          <div class="description">
-            <div class="description-top">
-              <p>Team Project</p>
-              <h2>VIVIENNE WESTWOOD</h2>
-              <P>#HTML5&CSS3 #JavaScript #jQuery<br>#GSAP #AOS #SWIPER</P>
+          <li class="sejin-bv grid-wrapper">
+            <div class="description">
+              <div class="description-top">
+                <p>Team Project</p>
+                <h2>SEJIN BRONZE VILL</h2>
+                <p>
+                  #FIGMA #PHOTOSHOP #ILLUSTRATOR <br />
+                  #CANVA
+                </p>
+              </div>
+              <div class="description-bottom">
+                <ul class="website flex-wrapper">
+                  <li>website</li>
+                  <li><a href="#">sejin-bronze-vill</a></li>
+                </ul>
+                <ul class="report flex-wrapper">
+                  <li>report</li>
+                  <li><a href="#">PPt. 보러가기</a></li>
+                </ul>
+              </div>
             </div>
-            <div class="description-bottom">
-              <ul class="website flex-wrapper">
-                <li>website</li>
-                <li><a href="#">vivienne-westwood</a></li>
-              </ul>
-              <ul class="report flex-wrapper">
-                <li>report</li>
-                <li><a href="#">완료보고서 보러가기</a></li>
-              </ul>
+            <!-- <div class="img-wrapper"></div> -->
+          </li>
+
+          <li class="creating grid-wrapper">
+            <div class="description">
+              <div class="description-top">
+                <p>Individual Project</p>
+                <h2>F&B EVENT</h2>
+                <p>
+                  #FIGMA #PHOTOSHOP #ILLUSTRATOR <br />
+                  #CANVA
+                </p>
+              </div>
+              <div class="description-bottom">
+                <ul class="website flex-wrapper">
+                  <li>website</li>
+                  <li><a href="#">xxxxx</a></li>
+                </ul>
+                <ul class="report flex-wrapper">
+                  <li><a href="#">View more</a></li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="img-wrapper"></div>
-        </li>
+            <!-- <div class="img-wrapper"></div> -->
+          </li>
+        </ul>
+      </section>
+    </main>
 
-      </ul>
-    </section>
-  </main>
+    <footer class="fixed-position">
+      <a href="#">About me</a>
+    </footer>
 
-  <footer class="fixed-position">
-    <a href="#">About me</a>
-  </footer>
+    <!--   <script>
+      $(window).on("scroll", () => {
+        //main 영역의 4/5를 지나면 배너가 나타남
+        const mainHt = $("main").height() * 0.8;
+        if (scrollY > mainHt) {
+          $(".banner").addClass("on");
+        } else {
+          $(".banner").removeClass("on");
+        }
+      });
 
-</body>
-
+      import { EvRow } from "@/app/data"
+import { useContext } from "react";
+import Image from "next/image";
+import gsap from "gsap"
+import Sticky from "../Other/Sticky"
+import SlideUp from "../Other/slideUpAnimation"
+import  {ThemeContext}  from "../../providers/index";
+    </script> -->
+  </body>
 </html>
