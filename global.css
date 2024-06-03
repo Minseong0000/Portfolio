@@ -6,21 +6,21 @@
   /* 선언(설정) */
 
   /* fonts */
-  --font-ko: 'Pretendard', -apple-system, BlinkMacSystemFont, "Helvetica Neue","Apple SD Gothic Neo", Arial, sans-serif;
-  --font-en-main: 'Montserrat', -apple-system, BlinkMacSystemFont, "Helvetica Neue","Apple SD Gothic Neo", Arial, sans-serif;
-  --font-en-sub: 'Poppins', -apple-system, BlinkMacSystemFont, "Helvetica Neue","Apple SD Gothic Neo", Arial, sans-serif;
+  --font-ko: 'Pretendard', -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Apple SD Gothic Neo", Arial, sans-serif;
+  --font-en-main: 'Montserrat', -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Apple SD Gothic Neo", Arial, sans-serif;
+  --font-en-sub: 'Poppins', -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Apple SD Gothic Neo", Arial, sans-serif;
 
   /* colors */
   --color-gray-10: #FAFAFA;
   --color-gray-20: #9F9F9F;
   --color-gray-30: #777777;
   --color-gray-40: #EEEDED;
-  --color-lightblue: #EDF2F3; 
+  --color-lightblue: #EDF2F3;
   --color-white: #fff;
   --color-black: #000;
 
   /* font-size */
-  --font-xxl: 72px; 
+  --font-xxl: 72px;
   --font-xl: 34px;
   --font-lg: 27px;
   --font-md: 24px;
@@ -40,6 +40,11 @@ html {
 .grid-wrapper {
   display: grid;
 }
+
 .fixed-position {
   position: fixed;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
