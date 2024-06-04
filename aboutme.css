@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+body {
+  font-family: var(--font-en-main);
+  font-size: var(--font-xs);
+  background-color: var(--color-gray-10);
+  position: relative;
+}
+
+header {
+  justify-content: space-between;
+}
+
+header .menu-left a {
+  margin-right: 20px;
+}
+
+header .menu-left {
+  left: 35px;
+  top: 20px;
+}
+
+header .menu-right {
+  text-transform: capitalize;
+  right: 35px;
+  top: 20px;
+}
+
+main {
+  padding-top: 99px;
+  margin: auto;
+}
+
+main h1 {
+  font-size: var(--font-xxl);
+  font-weight: 300;
+  padding: 0 0 40px 9%;
+}
+
+main .technology {
+  grid-template-columns: 35.3% 35.5%;
+  grid-template-rows: 29vh 29vh;
+  justify-content: center;
+}
+
+main .technology div {
+  border: 1px solid #000;
+  border-radius: 40px;
+  /* place-items: center; */
+}
+
+main .technology h2 {
+  font-size: var(--font-lg);
+  font-weight: 500;
+  padding: 40px 0 10px 40px;
+}
+
+main .technology ul {
+  list-style: circle;
+  padding-left: 40px;
+}

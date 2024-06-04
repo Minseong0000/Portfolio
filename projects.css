@@ -57,147 +57,146 @@ main .portfolio-project {
   width: 68%;
 }
 
-.first {
-  /* background-color: blue; */
-}
-
-.second {
-  background-color: green;
-}
-
-.third {
-  background-color: yellow;
-}
-
-.fourth {
-  background-color: pink;
-}
-
 main .portfolio-project .portfolio-wrapper li {
   grid-template-columns: 55% 45%;
   height: 100vh;
   transform: translateY(-12vh);
+  /* width: 55%; */
+  border-bottom: 1px solid #000;
 }
 
 
-
 main .portfolio-project .portfolio-wrapper {
+  overflow: hidden;
   margin-top: 12vh;
   height: 76vh;
   border: 1px solid #000;
-  background-color: rgba(55, 75, 63, 0.5);
   border-radius: 60px;
+  background: linear-gradient(to right bottom, #fff, #ddd, rgb(77, 125, 96, 0.5));
 }
 
 main .portfolio-project .portfolio-wrapper .description {
   padding-top: calc(12vh + 60px);
-  height: 100vh;
-  /* width: calc(100% - 60px); */
-  /* margin: auto; */
   position: relative;
   margin-left: 60px;
+  grid-column: 1;
 }
 
-/* main .portfolio-project .portfolio-wrapper .description .description-bottom {
-  position: absolute;
-  display: block;
-} */
-
-/* 
-
-main .portfolio-project .portfolio-wrapper .description .description-top p:last-of-type {
-  padding-left: 5px;
-  color: var(--color-gray-30);
-}
-
-main .portfolio-project .portfolio-wrapper .description .description-top h2 {
+main .portfolio-project .portfolio-wrapper .description h2 {
   font-weight: 700;
   font-size: var(--font-xl);
 }
 
-main .portfolio-project .portfolio-wrapper .description .description-bottom {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+main .portfolio-project .portfolio-wrapper .description div:first-of-type {
+  padding-top: 36vh;
+}
+
+main .portfolio-project .portfolio-wrapper .description .skills {
+  padding-left: 5px;
+  color: var(--color-gray-30);
+}
+
+
+main .portfolio-project .portfolio-wrapper .description .website,
+.report {
   justify-content: space-between;
 }
 
-main .portfolio-project .portfolio-wrapper .description .description-bottom ul {
-  margin-bottom: 30px;
+main .portfolio-project .img-container1 img {
+  /* padding-top: 12vh; */
+  /* padding-left: calc(5% + 30px); */
+  height: 53%;
+  width: 20%;
+  object-fit: cover;
+  border-radius: 30px;
+  position: fixed;
+  top: 26vh;
+  right: 60px;
+  z-index: 9999;
+  box-shadow: 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    100px 100px 80px rgba(0, 0, 0, 0.07);
 }
 
-main .portfolio-project .portfolio-wrapper .description .description-bottom ul li:first-child {
+main .portfolio-project .img-container2 img {
+  height: 53%;
+  width: 19%;
+  object-fit: cover;
+  border-radius: 30px;
+  position: fixed;
+  top: 24vh;
+  right: calc(60px + 0.5%);
+  z-index: 999;
+  box-shadow: 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    100px 100px 80px rgba(0, 0, 0, 0.07);
+}
+
+main .portfolio-project .img-container3 img {
+  height: 53%;
+  width: 18%;
+  object-fit: cover;
+  border-radius: 30px;
+  position: fixed;
+  top: 22vh;
+  right: calc(60px + 1%);
+  z-index: 99;
+  box-shadow: 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    100px 100px 80px rgba(0, 0, 0, 0.07);
+}
+
+main .portfolio-project .img-container4 img {
+  height: 53%;
+  width: 17%;
+  object-fit: cover;
+  border-radius: 30px;
+  position: fixed;
+  top: 20vh;
+  right: calc(60px + 1.5%);
+  z-index: 9;
+  box-shadow: 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    100px 100px 80px rgba(0, 0, 0, 0.07);
+}
+
+main .portfolio-project .portfolio-wrapper .description .website a {
+  color: var(--color-gray-30);
+  text-decoration: underline;
+  /* text-align: left; */
+}
+
+main .portfolio-project .portfolio-wrapper .description .website p {
   font-weight: 500;
 }
 
-main .portfolio-project .portfolio-wrapper .description .description-bottom ul li:last-child {
-  text-align: left;
+main .portfolio-project .portfolio-wrapper .description .report {
+  margin-top: 20px;
 }
 
-main .portfolio-project .portfolio-wrapper .description .description-bottom .website li a {
-  color: var(--color-gray-30);
-  text-decoration: underline;
-  padding-left: 20px;
+main .portfolio-project .portfolio-wrapper .description .report p {
+  padding-top: 10px;
+  font-weight: 500;
 }
 
-main .portfolio-project .portfolio-wrapper .description .description-bottom .report li a {
+main .portfolio-project .portfolio-wrapper .description .report a {
   border: 1px solid var(--color-black);
   padding: 10px 20px;
   border-radius: 20px;
   text-wrap: nowrap;
 }
 
-main .portfolio-project .portfolio-wrapper .description .description-bottom .report li a:hover {
+main .portfolio-project .portfolio-wrapper .description .report a:hover {
   background-color: var(--color-lightblue);
-} */
+}
+
+main .portfolio-project .portfolio-wrapper li .img-wrapper {
+  width: 100%;
+  height: 100%;
+  grid-column: 2;
+}
 
 footer {
   bottom: 20px;
   left: 35px;
 }
-
-/* main .portfolio-project .portfolio-wrapper .vivienne-westwood {
-  background-color: rgba(55, 75, 63, 0.5);
-}
-
-
-
-main .portfolio-project .portfolio-wrapper .vivienne-westwood .img-wrapper {
-  width: 100%;
-  height: 100%;
-  grid-column: 2;
-}
-
-main .portfolio-project .portfolio-wrapper .vivienne-westwood .img-wrapper .img-container1 {
-  width: 100%;
-  height: 76%;
-  background: url(./assets/images/gallery.png) no-repeat 50% / cover;
- 
-  border-top-right-radius: 60px;
-  border-bottom-right-radius: 60px;
-  box-shadow:
-    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
-    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
-    100px 100px 80px rgba(0, 0, 0, 0.07);
-}
-
-
-
-
-main .portfolio-project .portfolio-wrapper .sejin-bv .img-wrapper {
-  width: 100%;
-  height: 100%;
-  background: url(./assets/images/gallery2.png) no-repeat 50% / cover;
-  grid-column: 2;
-}
-
-main .portfolio-project .portfolio-wrapper .creating .img-wrapper {
-  width: 100%;
-  height: 100%;
-  grid-column: 2;
-}
-
-main .portfolio-project .portfolio-wrapper .creating {
-  background-color: var(--color-white);
-}
- */
