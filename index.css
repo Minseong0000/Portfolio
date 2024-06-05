@@ -13,10 +13,15 @@ header {
   justify-content: space-between;
 }
 
-header .menu-left {}
+header .menu-left {
+  position: fixed;
+  top: 20px;
+  left: 35px;
+  z-index: 999;
+}
 
 header .menu-left .global-navigation {
-  margin: 20px 0 0 35px;
+  /* margin: 20px 0 0 35px; */
 }
 
 header .menu-left .global-navigation li {
@@ -26,20 +31,23 @@ header .menu-left .global-navigation li {
 header .menu-left .global-navigation li a {}
 
 header .menu-right {
-  margin: 20px 35px 0 0;
+  /* margin: 20px 35px 0 0; */
+  position: fixed;
+  top: 20px;
+  right: 35px;
+  z-index: 999;
 }
 
 main {
   font-size: var(--font-xxl);
   color: var(--color-gray-20);
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 main h1 {
   font-family: var(--font-en-sub);
+  position: absolute;
+  top: 30%;
+  left: 5vw;
 }
 
 main h1 span {
@@ -49,19 +57,204 @@ main h1 span {
 main button {
   font-size: var(--font-lg);
   background-color: var(--color-white);
-  border: 1px #000 solid;
-  width: 222px;
-  height: 78px;
-  border-radius: 40px;
+  border: none;
   cursor: pointer;
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+  /* transform: translate(-50%, -50%); */
+  padding: 0;
+  border-radius: 40px;
+  /* position: relative; */
+}
+
+main button a {
+  padding: 15px 30px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border: 1px solid #000;
+  border-radius: 40px;
+
 }
 
 main button:hover {
-  background-color: var(--color-lightblue);
+  background-color: var(--color-black);
+  color: var(--color-white);
 }
 
 footer {
-  position: absolute;
+  position: fixed;
   bottom: 20px;
   left: 35px;
+}
+
+/* ================================ */
+.wrapper {
+  position: relative;
+}
+
+.hero {
+  min-height: 100vh;
+  width: 100%;
+  /* padding: clamp(1rem, 2vw, 5rem); */
+  display: flex;
+  align-items: center;
+}
+
+.wrapper:not(span) .hero--secondary {
+  --mask: radial-gradient(circle at var(--x, 70%) var(--y, 50%), black 25%, transparent 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #482EF4, #5FF4C2, #ffffff);
+  color: var(--color-white);
+  -webkit-mask-image: var(--mask);
+  mask-image: var(--mask);
+}
+
+.hero__heading {
+  text-transform: uppercase;
+  margin: 0;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: var(--font-xxl);
+  font-family: var(--font-en-sub);
+  font-weight: 500;
+}
+
+/* ==================================== */
+
+.star-1 {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 25px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+}
+
+.star-2 {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-3 {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-4 {
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  width: 8px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all .8s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-5 {
+  position: absolute;
+  top: 25%;
+  left: 45%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all .6s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-6 {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all .8s ease;
+}
+
+.fil0 {
+  fill: #FFFDEF
+}
+
+button:hover .star-1 {
+  position: absolute;
+  top: -80%;
+  left: -30%;
+  width: 25px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-2 {
+  position: absolute;
+  top: -25%;
+  left: 10%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-3 {
+  position: absolute;
+  top: 55%;
+  left: 25%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-4 {
+  position: absolute;
+  top: 30%;
+  left: 80%;
+  width: 8px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-5 {
+  position: absolute;
+  top: 25%;
+  left: 115%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-6 {
+  position: absolute;
+  top: 5%;
+  left: 60%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
 }

@@ -62,7 +62,7 @@ main .portfolio-project .portfolio-wrapper li {
   height: 100vh;
   transform: translateY(-12vh);
   /* width: 55%; */
-  border-bottom: 1px solid #000;
+  /* border-bottom: 1px solid #000; */
 }
 
 

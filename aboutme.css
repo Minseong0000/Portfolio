@@ -41,12 +41,15 @@ main .technology {
   grid-template-columns: 35.3% 35.5%;
   grid-template-rows: 29vh 29vh;
   justify-content: center;
+
 }
 
 main .technology div {
   border: 1px solid #000;
   border-radius: 40px;
   /* place-items: center; */
+  background-color: var(--color-white);
+  transition: .5s;
 }
 
 main .technology h2 {
@@ -57,5 +60,11 @@ main .technology h2 {
 
 main .technology ul {
   list-style: circle;
-  padding-left: 40px;
+  padding-left: 80px;
+  line-height: 1.6;
+}
+
+main .technology div:hover {
+  background-color: var(--color-black);
+  color: var(--color-white);
 }

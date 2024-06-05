@@ -16,6 +16,8 @@
 
   <!-- jquery script -->
   <script src="./assets/scripts/jquery-3.7.1.min.js"></script>
+  <!-- gsap -->
+  <script src='./assets/scripts/gsap.min.js'></script>
   <!-- index js -->
   <script defer src="./index.js"></script>
 </head>
@@ -34,17 +36,124 @@
     </div>
   </header>
 
-  <main>
-    <h1>
-      Hey! I'm <span>Minseong,</span><br>
-      a <span class="txt-type" data-wait="1000" data-words='["Chef","Designer","Developer"]'></span>
-    </h1>
-    <button><a href="./projects.html">projects</a></button>
+  <main class="wrapper">
+    <div class="hero">
+      <h1 class="hero__heading">
+        Hey! I'm <span>Minseong,</span><br>
+        a <span class="txt-type" data-wait="1000" data-words='["Chef","Designer","Developer"]'></span>
+      </h1>
+    </div>
+
+    <div class="hero hero--secondary" aria-hidden="true" data-hero>
+      <h1 class="hero__heading">Nice to meet you! <br> enjoy your day
+      </h1>
+    </div>
+
+
+    <button id="projects"><a href="./projects.html">projects</a>
+      <div class="star-1">
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53"
+          style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+          version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+          <defs></defs>
+          <g id="Layer_x0020_1">
+            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+            <path
+              d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+              class="fil0"></path>
+          </g>
+        </svg>
+      </div>
+      <div class="star-2">
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53"
+          style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+          version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+          <defs></defs>
+          <g id="Layer_x0020_1">
+            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+            <path
+              d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+              class="fil0"></path>
+          </g>
+        </svg>
+      </div>
+      <div class="star-3">
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53"
+          style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+          version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+          <defs></defs>
+          <g id="Layer_x0020_1">
+            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+            <path
+              d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+              class="fil0"></path>
+          </g>
+        </svg>
+      </div>
+      <div class="star-4">
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53"
+          style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+          version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+          <defs></defs>
+          <g id="Layer_x0020_1">
+            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+            <path
+              d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+              class="fil0"></path>
+          </g>
+        </svg>
+      </div>
+      <div class="star-5">
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53"
+          style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+          version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+          <defs></defs>
+          <g id="Layer_x0020_1">
+            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+            <path
+              d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+              class="fil0"></path>
+          </g>
+        </svg>
+      </div>
+      <div class="star-6">
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53"
+          style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+          version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+          <defs></defs>
+          <g id="Layer_x0020_1">
+            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+            <path
+              d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+              class="fil0"></path>
+          </g>
+        </svg>
+      </div>
+    </button>
+
+
   </main>
 
   <footer>
     <a href="./aboutme.html">About me</a>
   </footer>
+
+  <script>
+    const hero = document.querySelector('[data-hero]')
+
+    window.addEventListener('mousemove', (e) => {
+      const { clientX, clientY } = e
+      const x = Math.round((clientX / window.innerWidth) * 100)
+      const y = Math.round((clientY / window.innerHeight) * 100)
+
+      gsap.to(hero, {
+        '--x': `${x}%`,
+        '--y': `${y}%`,
+        duration: 0.3,
+        ease: 'sine.out',
+      })
+    })
+  </script>
 
 </body>
 

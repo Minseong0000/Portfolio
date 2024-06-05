@@ -18,6 +18,13 @@
   --color-lightblue: #EDF2F3;
   --color-white: #fff;
   --color-black: #000;
+  --color-red: #FF6565;
+  --color-pink: #FF64F9;
+  --color-purple: #6B5FFF;
+  --color-blue: #4D8AFF;
+  --color-green: #5BFF89;
+  --color-yellow: #FFEE55;
+  --color-orange: #FF6D1B;
 
   /* font-size */
   --font-xxl: 72px;
