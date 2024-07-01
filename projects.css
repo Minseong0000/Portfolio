@@ -4,12 +4,14 @@ body {
   font-family: var(--font-en-main);
   font-size: var(--font-xs);
   background-color: var(--color-gray-10);
-  position: relative;
-  height: 400vh;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 header {
   justify-content: space-between;
+
 }
 
 header .menu-left a {
@@ -19,184 +21,228 @@ header .menu-left a {
 header .menu-left {
   left: 35px;
   top: 20px;
+  z-index: 9999;
 }
 
 header .menu-right {
   text-transform: capitalize;
   right: 35px;
   top: 20px;
+  z-index: 9999;
 }
 
-main {
-
-  align-items: center;
+.flex-wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
-main .portfolio-list {
-  font-family: var(--font-en-sub);
-  font-size: var(--font-sm);
-  color: var(--color-gray-20);
-  text-transform: uppercase;
-  width: 32%;
+section {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  /* Ensure it's above background but below content */
 }
 
-main .portfolio-list li.on {
-  color: var(--color-black);
+.fixed-area {
+  width: 65vw;
+  margin-left: 25vw;
+  margin-top: 12vh;
+  z-index: 2;
+  /* Set z-index to be above section */
+  background-color: #ddd;
+  border: 1px solid #000;
+  border-radius: 60px;
+  height: 76vh;
+  position: fixed;
+  background: linear-gradient(to right bottom, #fff, #ddd, rgb(77, 125, 96, 0.5));
+  overflow: hidden;
 }
 
-main .portfolio-list ul {
-  margin-left: 100px;
+.slide-container {
+  position: absolute;
+  width: 100%;
+  height: 400%;
+  /* 4 slides, each 100vh */
+  transition: transform 0.6s ease;
+  /* Smooth transition for sliding */
+  z-index: 3;
+  /* Ensure it's above fixed-area */
 }
 
-main .portfolio-list ul li {
+ul {
+  list-style: none;
+  z-index: 4;
+  /* Ensure bullets are on top */
+}
+
+ul li {
   margin: 20px;
 }
 
-main .portfolio-project {
-  margin-left: 32%;
-  width: 68%;
+ul a {
+  /* text-decoration: none; */
+  /* color: rgb(159, 159, 159); */
+  font-family: var(--font-en-sub);
+  font-size: var(--font-sm);
+  color: var(--color-gray-20);
 }
 
-main .portfolio-project .portfolio-wrapper li {
-  grid-template-columns: 55% 45%;
+.slide {
+  width: 100%;
   height: 100vh;
-  transform: translateY(-12vh);
-  /* width: 55%; */
-  /* border-bottom: 1px solid #000; */
-}
-
-
-main .portfolio-project .portfolio-wrapper {
-  overflow: hidden;
-  margin-top: 12vh;
-  height: 76vh;
-  border: 1px solid #000;
-  border-radius: 60px;
-  background: linear-gradient(to right bottom, #fff, #ddd, rgb(77, 125, 96, 0.5));
-}
-
-main .portfolio-project .portfolio-wrapper .description {
-  padding-top: calc(12vh + 60px);
+  display: flex;
+  justify-content: center;
+  /* Center content horizontally */
+  align-items: center;
+  /* Center content vertically */
+  flex-shrink: 0;
+  box-sizing: border-box;
   position: relative;
-  margin-left: 60px;
-  grid-column: 1;
 }
 
-main .portfolio-project .portfolio-wrapper .description h2 {
-  font-weight: 700;
-  font-size: var(--font-xl);
+.description {
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  text-align: left;
+  /* Align text to the left */
+  width: 40%;
 }
 
-main .portfolio-project .portfolio-wrapper .description div:first-of-type {
+.description div:first-of-type {
   padding-top: 36vh;
 }
 
-main .portfolio-project .portfolio-wrapper .description .skills {
+.description p {
+  margin: 0;
+  padding: 0;
+}
+
+.description h2 {
+  font-weight: 700;
+  font-size: 34px;
+  margin: 0;
+  padding: 0;
+}
+
+.description .skills {
   padding-left: 5px;
   color: var(--color-gray-30);
 }
 
-
-main .portfolio-project .portfolio-wrapper .description .website,
-.report {
-  justify-content: space-between;
+.description .report {
+  margin-top: 20px;
 }
 
-main .portfolio-project .img-container1 img {
+.description .website a {
+  padding-right: 10px;
+  color: var(--color-gray-30);
+  text-decoration: underline;
+}
+
+.description .website p {
+  font-weight: 500;
+}
+
+.description .report p {
+  padding-top: 10px;
+  font-weight: 500;
+}
+
+.description .report a {
+  border: 1px solid #000;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-wrap: nowrap;
+  text-decoration: none;
+}
+
+.bullets {
+  position: fixed;
+  top: 50%;
+  left: 5%;
+  transform: translate(0, -50%);
+  z-index: 4;
+  font-size: 20px;
+  /* Ensure bullets are on top */
+}
+
+.active-bullet {
+  color: #000;
+}
+
+.img-wrapper img {
+  transform-origin: top center;
+  /* Set the transform origin to top center */
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  /* Smooth transition for transform and opacity */
+}
+
+.img-container1 img {
   /* padding-top: 12vh; */
   /* padding-left: calc(5% + 30px); */
+  display: block;
   height: 53%;
   width: 20%;
   object-fit: cover;
   border-radius: 30px;
   position: fixed;
   top: 26vh;
-  right: 60px;
+  right: calc(10vw + 60px);
   z-index: 9999;
   box-shadow: 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
     22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
     100px 100px 80px rgba(0, 0, 0, 0.07);
 }
 
-main .portfolio-project .img-container2 img {
+.img-container2 img {
+  display: block;
   height: 53%;
   width: 19%;
   object-fit: cover;
   border-radius: 30px;
   position: fixed;
   top: 24vh;
-  right: calc(60px + 0.5%);
+  right: calc(10.5vw + 60px);
   z-index: 999;
   box-shadow: 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
     22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
     100px 100px 80px rgba(0, 0, 0, 0.07);
 }
 
-main .portfolio-project .img-container3 img {
+.img-container3 img {
+  display: block;
   height: 53%;
   width: 18%;
   object-fit: cover;
   border-radius: 30px;
   position: fixed;
   top: 22vh;
-  right: calc(60px + 1%);
+  right: calc(11vw + 60px);
   z-index: 99;
   box-shadow: 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
     22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
     100px 100px 80px rgba(0, 0, 0, 0.07);
 }
 
-main .portfolio-project .img-container4 img {
+.img-container4 img {
   height: 53%;
   width: 17%;
   object-fit: cover;
   border-radius: 30px;
   position: fixed;
   top: 20vh;
-  right: calc(60px + 1.5%);
+  right: calc(11.5vw + 60px);
   z-index: 9;
   box-shadow: 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
     22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
     100px 100px 80px rgba(0, 0, 0, 0.07);
 }
 
-main .portfolio-project .portfolio-wrapper .description .website a {
-  color: var(--color-gray-30);
-  text-decoration: underline;
-  /* text-align: left; */
-}
-
-main .portfolio-project .portfolio-wrapper .description .website p {
-  font-weight: 500;
-}
-
-main .portfolio-project .portfolio-wrapper .description .report {
-  margin-top: 20px;
-}
-
-main .portfolio-project .portfolio-wrapper .description .report p {
-  padding-top: 10px;
-  font-weight: 500;
-}
-
-main .portfolio-project .portfolio-wrapper .description .report a {
-  border: 1px solid var(--color-black);
-  padding: 10px 20px;
-  border-radius: 20px;
-  text-wrap: nowrap;
-}
-
-main .portfolio-project .portfolio-wrapper .description .report a:hover {
-  background-color: var(--color-lightblue);
-}
-
-main .portfolio-project .portfolio-wrapper li .img-wrapper {
-  width: 100%;
-  height: 100%;
-  grid-column: 2;
-}
-
 footer {
   bottom: 20px;
   left: 35px;
+  z-index: 9999;
 }
