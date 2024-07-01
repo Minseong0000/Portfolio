@@ -54,6 +54,18 @@ main h1 span {
   color: #000;
 }
 
+main button.skills {
+  position: fixed;
+  bottom: 170px;
+  right: 100px;
+}
+
+main button.skills a {
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+
 main button {
   font-size: var(--font-lg);
   background-color: var(--color-white);
